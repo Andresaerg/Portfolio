@@ -1,10 +1,17 @@
 :root{
-    --bg-ptotal: #eaeaea;
+    --bg-body: #FBFBFE;
+    --bg-principal: #1083D6;
+    --border-color: #EFF3F5;
+    --container: #FFF;
     /* --bg-principal: #4a4a4a; */
-    --bg-principal: rgb(50, 90, 200);
-    --txtcolor-principal: #fff;
-    --txtcolor-casual: green;
-    --principal-hover: greenyellow;
+    --txtcolor-principal: #EFF3F5;
+    --txtcolor-casual: #1083D6;
+
+    --bg-secondary: #4A4A4A;
+}
+
+.bg2{
+    background-color: var(--bg-secondary);
 }
 
 *{
@@ -20,7 +27,7 @@ html{
 }
 
 body{
-    background-color: #eaeaea;
+    background-color: var(--bg-body);
 }
 
 header{
@@ -57,10 +64,26 @@ header{
     color: var(--txtcolor-principal);
     text-decoration: none;
     transition: all .5s ease-out;
+    display: inline-block;
+    position: relative;
 }
 
-.navbar li a:hover{
-    color: var(--principal-hover);
+.navbar li a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(90deg, white, lightgrey);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.navbar li a:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 .navbar li:last-child{
@@ -69,6 +92,69 @@ header{
 
 .responsive{
     display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+  
+  /* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+  /* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+  /* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 .container{
@@ -80,14 +166,21 @@ header{
 }
 
 article{
-    background-color: #fff;
+    background-color: var(--container);
     padding: 25px 100px;
+    border: 1px solid var(--border-color);
 }
 
 article #inicio{
     display: flex;
     justify-content: center;
     gap: 0 50px;
+}
+
+article #inicio > img{
+    width: 25%; 
+    object-fit: cover; 
+    object-position: center;
 }
 
 .lil-container{
@@ -101,6 +194,11 @@ article #inicio{
 
 .lil-container a:hover{
     color: var(--txtcolor-casual);
+}
+
+.redes{
+    display: flex; 
+    gap: 0 20px;
 }
 
 .ing{
@@ -147,5 +245,19 @@ footer{
     }
     .responsive{
         display: block;
+    }
+    article{
+        padding: 10px;
+    }
+    article #inicio{
+        gap: 25px;
+        flex-direction: column;
+        align-items: center;
+    }
+    article #inicio > img{
+        width: 50%;
+    }
+    .redes{
+        justify-content: center;
     }
 }
