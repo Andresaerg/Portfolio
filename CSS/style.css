@@ -203,7 +203,7 @@ input:checked + .slider:before {
 
 article{
     background-color: var(--container);
-    padding: 25px 100px;
+    padding: 25px 50px;
     border: 1px solid var(--border-color);
     color: var(--article-color);
 }
@@ -211,11 +211,11 @@ article{
 article #inicio{
     display: flex;
     justify-content: center;
-    gap: 0 50px;
+    gap: 0 75px;
 }
 
 article #inicio > img{
-    width: 25%; 
+    width: 50%; 
     object-fit: cover; 
     object-position: center;
 }
@@ -241,7 +241,7 @@ article .section > img{
 }
 
 .lil-container{
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .lil-container a{
@@ -296,23 +296,37 @@ footer{
 }
 
 .project{
-    padding: 5px 5px 35px 5px;
-    background-color: var(--bg-principal);
-    border: var(--border);
+    padding: 5px 5px 60px 5px;
+    /*background-color: var(--bg-principal);*/
+    /* border: var(--border); */
     border-radius: 4px;
-    color: var(--txtcolor-principal);
+    /* color: var(--txtcolor-principal); */
     position: relative;
     max-width: 50vh;
     transition: .2s;
+    background-color: #EFEFEF;
+    color: unset;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+    min-width: 240px;
 }
 
 .project:hover{
-    transform: scale(1.25);
+    transform: scale(1.05);
 }
+
 
 .project img{
     max-width: 100%;
     border: var(--border);
+}
+
+.project #aTitle{
+    font-size: 18px;
+    display: block;
+    /* text-align: start; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-style: italic;
 }
 
 .project button{
@@ -323,7 +337,8 @@ footer{
     left: 0;
     width: 100%;
     border-radius: 0 0 4px 4px;
-    background-color: var(--bg-secondary);
+    /* background-color: var(--bg-secondary); */
+    background-color: var(--bg-principal);
     color: var(--txtcolor-principal);
     padding: 5px;
     cursor: pointer;
@@ -346,6 +361,73 @@ footer{
     transform: scaleX(.25);
     transform-origin: bottom left;
 }
+
+.container-slider{
+    width: 100%;
+    height: 10vh;
+    max-height: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*.container-slider:hover > .slider_btn{
+    opacity: 1;
+}*/
+
+.slider2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    margin-left: -25%;
+}
+
+.slider_Section{
+    width: 200%;
+    display: flex;
+    justify-content: center;
+}
+
+.sliderImg{
+    display: block;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider_btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: monospace;
+    text-align: center;
+    cursor: pointer;
+/*    opacity: 0; */
+}
+
+.slider_btn:hover{
+    background: orange;
+}
+
+.btn_left{
+    left: 10px;
+    position: absolute;
+    text-align: center;
+}
+
+.btn_right{
+    right: 10px;
+    position: absolute;
+    text-align: center;
+}
+
+
+
 
 @media (max-width: 800px){
     .navbar ul li:first-child{
@@ -415,5 +497,13 @@ footer{
         margin-top: 65px;
         height: 40vh;
         position: relative;
+    }
+    .project #aTitle{
+        font-size: 15px;
+        display: block;
+        /* text-align: start; */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-style: italic;
     }
 }

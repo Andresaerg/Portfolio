@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés Rosales | Portfolio</title>
+    <title>Andrés Rosales | Engineer</title>
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <link rel="shortcut icon" href="IMGS/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="libs/Bootstrap/CSS/bootstrap.css"></link>
     <script type="text/javascript" src="JS/principal-scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="libs/Bootstrap/JS/bootstrap.bundle.js"></script>
+    <script src="libs/Bootstrap/JS/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <header>
@@ -46,25 +48,33 @@
                 </div>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#me">Sobre mí</a></li>
-                <li><a href="#xp">Experiencia</a></li>
                 <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    <div class="principal_banner">
+   <!--  <div class="principal_banner">
         <img src="IMGS/wallpaper2.jpg" alt="wallpaper2" />
         <span class="arcodev"><b>ARCODEV</b></span>
         <br>
         <span class="eslogan">Andrés Rosales Code Developer</span>
-    </div>
+    </div> -->
     <div class="container">
         <article>
-            <div id="inicio">
+            <div id="inicio" class="section">
                 <div class="lil-container">
-                    <span class="titles">Mi portafolio: ¿quién soy? Mi experiencia, proyectos y habilidades</span>
+                    <span style="font-size: 14px;">Ingeniero en Informática - Desarrollador Web - Desarrollador de Software</span>
+                    <br><br>
+                    <!--span class="titles">Mi portafolio: ¿quién soy? Mi experiencia, proyectos y habilidades</!--span>
                     <br>
-                    <p style="font-size: 25px"><span>Autor:</span> <span class="ing">Andrés Rosales, Ingeniero de Software</span></p>
+                    <p style="font-size: 25px"><span>Autor:</span> <span class="ing">Andrés Rosales, Ingeniero de Software</span></p> -->
+                    <span class="titles" style="font-size: 85px; font-weight: bold; line-height: 10vh; letter-spacing: 1px;">Andrés Rosales</span>
+                    <br><br>
+                    <p style="line-height: 25px; letter-spacing: .75px;">
+                        Desarrollo proyectos orientados al entorno web, priorizando la experiencia de usuario, interfaz y funcionalidades de los sistemas.
+                        Pensados para integrarse acorde a las estrategias e imagen de tu marca.
+                    </p>
                     <br><br>
                     <span class="redes">
                         <a href="https://github.com/Andresaerg" target="_blank">
@@ -83,70 +93,163 @@
                             </svg>
                         </a>
                     </span>
+                    <br><br>
+                    <button class="btn btn-primary" style="padding: 10px 30px;"><b>CURRICULUM</b></button>
                 </div>
-                <img src="IMGS/banner2.gif" alt="banner" id="banner">
+                <img style="border: unset; box-shadow: unset;" src="IMGS/banner2.gif" alt="banner" id="banner">
             </div>
+            <span id="me"></span>
         </article>
         <article>
             <div style="text-align: center;">
-                <span class="titles subtitles" id="me">Sobre mí</span>
+                <span class="titles subtitles">Sobre mí</span>
                 <br><br><br><br>
                 <div class="section">
                     <img src="imgs/test.png" alt="me">
                     <p style="text-align: justify;">
                         Mi nombre es Andrés Rosales, tengo 23 años y soy egresado de la Universidad Privada Rafael Belloso Chacín (URBE) como
-                        <b><i>Ingeniero de Software</i></b> una vez culminada la carrera de Ingeniería en Informática. Actualmente estoy enfocado
-                        en el desarrollo web Full-Stack y poseo 1 año de experiencia en el área. Mi objetivo es desarrollar todo tipo de software y apps,
-                        trabajando de manera autónoma o en equipo de forma eficiente, implementado metodologías ágiles
-                        y obteniendo así un alto nivel como DevOps.
+                        <b><i>Ingeniero en Informática</i></b>. Actualmente estoy enfocado
+                        en el desarrollo web y de software, poseo 1 año de experiencia en el área. Mi especialidad es desarrollar software y web apps,
+                        trabajando de forma indivial o en equipo, de manera eficiente e implementado metodologías ágiles, 
+                        obteniendo así una alta proyección como Ingeniero DevOps.
                     </p>
                 </div>
             </div>
+            <span id="skills"></span>
         </article>
         <article>
             <div style="text-align: center;">
-                <span class="titles subtitles" id="xp">
-                    Experiencia
-                </span>
+                <span class="titles subtitles">Habilidades</span>
                 <br><br><br><br>
-                <div class="section">
-                    <ol style="text-align:left;">
-                        <li>
-                            Técnico en seguridad electrónica en la empresa Térgyca, desde 06/2018 hasta 03/2022
-                        </li>
-                        <li>
-                            Desarrollador de Software Full-Stack en Super Videomania, desde 04/2022 hasta la actualidad
-                        </li>
-                    </ol>
+                <div class="section" style="flex-wrap: wrap; gap: 35px;">
+                    <div style="width:45%;">
+                        HTML
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                        </div>
+                    </div>
+                    <div style="width:45%;">
+                        CSS
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                    <div style="width:45%;">
+                        Vanilla JavaScript
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                        </div>
+                    </div>
+                    <div style="width:45%;">
+                        PHP Puro
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                        </div>
+                    </div>
+                    <div style="width:45%;">
+                        Bases de datos SQL
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                        </div>
+                    </div>
+                    <div style="width:45%;">
+                        Git
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                        </div>
+                    </div>
+                    <div style="width:45%;">
+                        Node JS
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                        </div>
+                    </div>
+                    <div style="width:45%;">
+                        Wix
+                        <br>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                        </div>
+                    </div>
                 </div>
-                <br><br>
-                <span class="titles subtitles">
-                    Proyectos
+            </div>
+            <span id="projects"></span>
+        </article>
+        <article>
+            <div style="text-align: center;">
+                <span class="titles subtitles" id="projects">
+                    Proyectos realizados
                 </span>
                 <br><br><br><br>
-                <div class="section">
+                <div class="section" style="flex-wrap: wrap; gap: 50px;">
                     <div class="project">
                         <a href="IMGS/inicio-svm.png" target="_blank" title="Ver imagen">
                             <img src="IMGS/inicio-svm.png" alt="index-svm">
                         </a>
-                        Página de Super Videomania, realizada con HTML, CSS, JS Vanilla Y PHP Puro.
-                        <button>Ir al sitio</button>
+                        <span id="aTitle">Super Videomania Web</span>
+                        Actualizaciones realizadas con HTML, CSS, JS Vanilla y PHP Puro.
+                        <a href="https://supervideomania.net/" target="_blank"><button>Ir al sitio</button></a>
                     </div>
                     <div class="project">
                         <a href="IMGS/reservas-soft_svm.png" target="_blank" title="Ver imagen">
                             <img src="IMGS/reservas-soft_svm.png" alt="reservas-svm">
                         </a>
-                        Software de reservación para Super Videomania, realizado con HTML, CSS, JS Vanilla, PHP Puro, SQL, Bootstrap y la librería Day.js
-                        <button>Ir al sitio</button>
+                        <span id="aTitle">Super Videomania Web</span>
+                        Software de reservación realizado con HTML, CSS, JS Vanilla, PHP Puro, SQL, Bootstrap y la librería Day.js
+                        <a href="https://supervideomania.net/" target="_blank"><button>Ir al sitio</button></a>
                     </div>
                     <div class="project">
                         <a href="IMGS/ecommerce-svm.png" target="_blank" title="Ver imagen">
                             <img src="IMGS/ecommerce-svm.png" alt="ecommerce-svm">
                         </a>
-                        Software ecommerce en entorno de pruebas para Super Videomania, realizado con HTML, CSS, JS Vanilla, PHP Puro, SQL y Bootstrap.
-                        <button>Ir al sitio</button>
+                        <span id="aTitle">Super Videomania Web</span>
+                        Software ecommerce en entorno de pruebas realizado con HTML, CSS, JS Vanilla, PHP Puro, SQL y Bootstrap.
+                        <a href="https://supervideomania.net/" target="_blank"><button>Ir al sitio</button></a>
+                    </div>
+                    <div class="project">
+                        <a href="IMGS/Masersuca2.png" target="_blank" title="Ver imagen">
+                            <img src="IMGS/Masersuca2.png" alt="masersuca-tesis">
+                        </a>
+                        <span id="aTitle">Masersuca &#8212; Gestión de Inventario</span>
+                        Software de administración para inventarios, ventas, clientes, facturas y demás. Realizado con HTML, CSS, JS Vanilla, PHP Puro, SQL, Bootstrap y NodeJS junto a otras dependencias.
+                        <a href="IMGS/Masersuca2.png" target="_blank"><button>Ver imagen</button></a>
+                    </div>
+                    <div class="project">
+                        <a href="IMGS/El-Backend.png" target="_blank" title="Ver imagen">
+                            <img src="IMGS/El-Backend.png" alt="El-backend">
+                        </a>
+                        <span id="aTitle">Proyecto académico simple</span>
+                        Página web realizada rápidamente con motivos académicos, utilizando HTML y CSS, estilos diseñados desde cero.
+                        <a href="https://andresaerg.github.io/TW-Proyecto/index.html" target="_blank"><button>Ir al sitio</button></a>
                     </div>
                 </div>
+            </div>
+        </article>
+        <article>
+            <div class="container-slider">
+                <div class="slider2" id="slider2">
+                    <div class="slider_Section">
+                        <img src="imgs/PHP.png" alt="" class="sliderImg">
+                    </div>
+                    <div class="slider_Section">
+                        <img src="imgs/ecommerce-svm.png" alt="" class="sliderImg">
+                    </div>
+                    <div class="slider_Section">
+                        <img src="imgs/El-Backend.png" alt="" class="sliderImg">
+                    </div>
+                    <div class="slider_Section">
+                        <img src="imgs/inicio-svm.png" alt="" class="sliderImg">
+                    </div>
+                </div>
+                <div class="slider_btn btn_left" id="btn_left">&#60;</div>
+                <div class="slider_btn btn_right" id="btn_right">&#62;</div>
             </div>
         </article>
     </div>
@@ -163,9 +266,10 @@
 </body>
 </html>
 
+<script src="JS/slider.js"></script>
 <script>
     window.onload = () => {
-        prueba(document.querySelector(".ing"), document.getElementById("date"));
+        prueba(/* document.querySelector(".ing"), */ document.getElementById("date"));
 
         let interruptor = document.getElementById("switch");
         interruptor.addEventListener("change", function(e){
@@ -178,7 +282,7 @@ function boxDisable(t) {
     if (t.checked) {
         console.log(document.getElementById('banner'));
         change_view_2(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'), this, document.getElementById('change_view_1'));
-        document.getElementById('banner').src = 'https://www.genesecloud.academy/wp-content/uploads/2021/06/Programming-amico-1280x1280.png';
+        document.getElementById('banner').src = 'IMGS/banner-dark.png';
     } else {
         change_view_1(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'), document.getElementById('change_view_2'), this);
         document.getElementById('banner').src = 'IMGS/banner2.gif';
