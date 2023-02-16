@@ -362,6 +362,12 @@ footer{
     transform-origin: bottom left;
 }
 
+.container-for-slider_container{
+    position: relative;
+    padding-right: 15vh;
+    padding-left: 15vh;
+}
+
 .container-slider{
     width: 100%;
     height: 10vh;
@@ -376,13 +382,17 @@ footer{
 
 .slider2{
     height: 100%;
-    width: 100%;
+    width: 260%;
     display: flex;
-    margin-left: -25%;
+    /* padding-left: 2.5%; */
+    /* margin-left: 25%; */
+    margin-right: 25%;
+    justify-content: center;
+    position: absolute;
 }
 
 .slider_Section{
-    width: 200%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -391,7 +401,7 @@ footer{
     display: block;
     width: 50%;
     height: 100%;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 
 .slider_btn{
@@ -426,6 +436,33 @@ footer{
     text-align: center;
 }
 
+
+.field {
+    margin-bottom: 10px;
+  }
+  
+  .field label {
+    display: block;
+    font-size: 12px;
+    color: #777;
+  }
+  
+  .field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4460AA;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
 
 
 

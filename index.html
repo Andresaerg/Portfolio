@@ -11,6 +11,9 @@
     <script type="text/javascript" src="JS/principal-scripts.js"></script>
     <script src="libs/Bootstrap/JS/bootstrap.bundle.js"></script>
     <script src="libs/Bootstrap/JS/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">emailjs.init('1DYi9grOdbv7E9jR3')
+</script>
 </head>
 <body>
     <header>
@@ -107,7 +110,7 @@
                 <div class="section">
                     <img src="imgs/test.png" alt="me">
                     <p style="text-align: justify;">
-                        Mi nombre es Andrés Rosales, tengo 23 años y soy egresado de la Universidad Privada Rafael Belloso Chacín (URBE) como
+                        Mi nombre es Andrés Rosales, tengo 23 años y soy egresado de la Universidad Privada Dr. Rafael Belloso Chacín (URBE) como
                         <b><i>Ingeniero en Informática</i></b>. Actualmente estoy enfocado
                         en el desarrollo web y de software, poseo 1 año de experiencia en el área. Mi especialidad es desarrollar software y web apps,
                         trabajando de forma indivial o en equipo, de manera eficiente e implementado metodologías ágiles, 
@@ -233,23 +236,76 @@
             </div>
         </article>
         <article>
-            <div class="container-slider">
-                <div class="slider2" id="slider2">
-                    <div class="slider_Section">
-                        <img src="imgs/PHP.png" alt="" class="sliderImg">
-                    </div>
-                    <div class="slider_Section">
-                        <img src="imgs/ecommerce-svm.png" alt="" class="sliderImg">
-                    </div>
-                    <div class="slider_Section">
-                        <img src="imgs/El-Backend.png" alt="" class="sliderImg">
-                    </div>
-                    <div class="slider_Section">
-                        <img src="imgs/inicio-svm.png" alt="" class="sliderImg">
+            <div style="text-align: center;">
+                <span class="titles subtitles">Tecnologías utilizadas</span>
+            </div>
+            <br><br>
+            <div class="container-for-slider_container">
+                <div class="container-slider">
+                    <div class="slider2" id="slider2">
+                        <div class="slider_Section">
+                            <img src="imgs/HTML5.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/CSS3.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/JS.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/PHP.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/Java.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/NodeJS.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/SQL2.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/Xampp.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/phpMyAdmin.webp" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/Git2.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/Postman.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/Bootstrap.png" alt="" class="sliderImg">
+                        </div>
+                        <div class="slider_Section">
+                            <img src="imgs/Wix.png" alt="" class="sliderImg">
+                        </div>
                     </div>
                 </div>
                 <div class="slider_btn btn_left" id="btn_left">&#60;</div>
                 <div class="slider_btn btn_right" id="btn_right">&#62;</div>
+            </div>
+        </article>
+        <article>
+            <div>
+                <form id="form">
+                    <div class="field">
+                        <label for="from_name">Nombre completo *</label>
+                        <input type="text" name="from_name" id="from_name">
+                    </div>
+                    <div class="field">
+                        <label for="email_id">Correo electrónico *</label>
+                        <input type="text" name="email_id" id="email_id">
+                    </div>
+                    <div class="field">
+                        <label for="message">Mensaje *</label>
+                        <input type="text" name="message" id="message">
+                    </div>
+                    
+                    <input type="submit" id="button" value="Enviar" >
+                </form>
             </div>
         </article>
     </div>
@@ -263,6 +319,7 @@
             </span>
         </div>
     </footer>
+    <script src="JS/email.js"></script>
 </body>
 </html>
 
