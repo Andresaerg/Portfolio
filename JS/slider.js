@@ -22,7 +22,7 @@ function Next(){
 btnRight.addEventListener('click', function(){
     Next();
     intervalManager(false);
-    intervalManager(true, Next, 5000);
+    intervalManager(true, Next, 4000);
 });
 
 function Back(){
@@ -40,7 +40,7 @@ function Back(){
 btnLeft.addEventListener('click', function(){
     Back();
     intervalManager(false);
-    intervalManager(true, Next, 5000);    
+    intervalManager(true, Next, 4000);    
 });
 
 function intervalManager(flag, func, time){
@@ -50,4 +50,4 @@ function intervalManager(flag, func, time){
     clearInterval(intervalo);
 }
 
-intervalManager(true, Next, 5000);
+intervalManager(true, Next, 4000);
