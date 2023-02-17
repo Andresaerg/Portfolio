@@ -78,9 +78,9 @@
         <article>
             <div id="inicio" class="section">
                 <div class="lil-container">
-                    <span style="font-size: 14px;">Ingeniero en Informática - Desarrollador Web - Desarrollador de Software</span>
+                    <span id="tags">Ingeniero en Informática - Desarrollador Web - Desarrollador de Software</span>
                     <br><br>
-                    <span class="titles" style="font-size: 85px; font-weight: bold; line-height: 10vh; letter-spacing: 1px;">Andrés Rosales</span>
+                    <span class="name">Andrés Rosales</span>
                     <br><br>
                     <p style="line-height: 25px; letter-spacing: .75px;">
                         Desarrollo proyectos orientados al entorno web, priorizando la experiencia de usuario, interfaz y funcionalidades de los sistemas.
@@ -268,7 +268,7 @@
                             <img src="imgs/Java.png" alt="" class="sliderImg">
                         </div>
                         <div class="slider_Section">
-                            <img src="imgs/NodeJS.png" alt="" class="sliderImg">
+                            <img src="imgs/NodeJS.png" alt="" class="sliderImg" id="nodejs">
                         </div>
                         <div class="slider_Section">
                             <img src="imgs/SQL2.png" alt="" class="sliderImg">
@@ -333,7 +333,7 @@
     </div>
     <div class="pie">
         <section>
-            <div>
+            <div class="logo">
                 <div style="text-align: center;">
                     <img src="IMGS/SDS.png" alt="SDS" width="200" height="200">
                 </div>
@@ -356,7 +356,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="menu">
                 <h1 class="lists">
                     Menú
                 </h1>
@@ -368,7 +368,7 @@
                     <a href="#contact"><li>Contacto</li></a>
                 </ul>
             </div>
-            <div>
+            <div class="atajos">
                 <h1 class="lists">
                     Atajos
                 </h1>
@@ -409,7 +409,7 @@
 function boxDisable(t) {
     if (t.checked) {
         change_view_2(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'));
-        setTimeout(document.getElementById('banner').src = 'IMGS/banner-dark.png', 5000);
+        document.getElementById('banner').src = 'IMGS/banner-dark.png';
     } else {
         change_view_1(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'));
         setTimeout(function(){
