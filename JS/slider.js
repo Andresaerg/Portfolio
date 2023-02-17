@@ -6,11 +6,16 @@ let sliderSectionLast = sliderSection[sliderSection.length -1];
 const btnLeft = document.querySelector("#btn_left");
 const btnRight = document.querySelector("#btn_right");
 
-//slider.insertAdjacentElement('afterbegin', sliderSectionLast);
-
-function Next(){
+function Next(p){
+    if(p === undefined && screen.width > 1250){
+        p = '-20%';
+    }
+    if(p === undefined && screen.width <= 1250){
+        p = '-34.5%';
+    }
     let sliderSectionFirst = document.querySelectorAll(".slider_Section")[0];
-    slider.style.marginLeft = "-20%"
+    slider.style.marginLeft = p;
+    /* slider.style.marginLeft = "-20%" */
     slider.style.transition = "all 0.5s";
     setTimeout(function(){
         slider.style.transition = "none";
@@ -20,15 +25,16 @@ function Next(){
 }
 
 btnRight.addEventListener('click', function(){
-    Next();
+    Next('-20%');
     intervalManager(false);
     intervalManager(true, Next, 4000);
 });
 
-function Back(){
+function Back(p){
     let sliderSection = document.querySelectorAll(".slider_Section");
     let sliderSectionLast = sliderSection[sliderSection.length -1];
-    slider.style.marginLeft = "20%";
+    slider.style.marginLeft = p;
+    /* slider.style.marginLeft = "20%"; */
     slider.style.transition = "all 0.5s";
     setTimeout(function(){
         slider.style.transition = "none";
@@ -38,7 +44,7 @@ function Back(){
 }
 
 btnLeft.addEventListener('click', function(){
-    Back();
+    Back('20%');
     intervalManager(false);
     intervalManager(true, Next, 4000);    
 });
@@ -51,3 +57,17 @@ function intervalManager(flag, func, time){
 }
 
 intervalManager(true, Next, 4000);
+
+if(screen.width <= 1250){
+    btnRight.addEventListener('click', function(){
+        Next('-34.5%');
+        intervalManager(false);
+        intervalManager(true, Next, 4000);
+    });
+
+    btnLeft.addEventListener('click', function(){
+        Back('34.5%');
+        intervalManager(false);
+        intervalManager(true, Next, 4000);    
+    });
+}

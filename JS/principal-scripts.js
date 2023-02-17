@@ -76,3 +76,14 @@ const change_view_2 = (layout1, layout2, bg, container, txt) => {
 
     document.getElementById('nodejs').src = 'IMGS/NodeJS-white.png';
 }
+
+window.addEventListener('scroll', function(e){
+    console.log(window.pageYOffset);
+    if(window.pageYOffset >= 665){
+        console.log("Oops");
+        document.getElementById("scroller").style.display = 'contents';
+        }else{
+        console.log("No oops");
+        document.getElementById("scroller").style.display = 'none';
+    }
+})
