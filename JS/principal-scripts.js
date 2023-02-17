@@ -26,6 +26,16 @@ const change_view_1 = (layout1, layout2, bg, container, txt) => {
     document.querySelectorAll('#pie1, #pie2').forEach(e => {
         e.style.color = 'var(--txtcolor-primary)';
     })
+
+    /* document.querySelector('.pie').style.background = 'var(--bg-body)';
+    document.querySelector('.pie').style.color = 'var(--article-color)';
+    document.querySelectorAll('.pie section span').forEach(e => {
+        e.style.color = 'var(--bg-principal)';
+    }); */
+    document.querySelectorAll('.pie2').forEach(e => {
+        e.classList.remove('pie2');
+        e.classList.add('pie');
+    });
 }
     
 const change_view_2 = (layout1, layout2, bg, container, txt) => {
@@ -51,4 +61,9 @@ const change_view_2 = (layout1, layout2, bg, container, txt) => {
     document.querySelectorAll('#pie1, #pie2').forEach(e => {
         e.style.color = 'var(--txtcolor-secondary)';
     })
+
+    document.querySelectorAll('.pie').forEach(e => {
+        e.classList.remove('pie');
+        e.classList.add('pie2');
+    });
 }

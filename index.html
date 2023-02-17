@@ -357,9 +357,9 @@
                 </div>
             </div>
             <div>
-                <h1><span style="color:var(--bg-principal); font-size: large;">
+                <h1 class="lists">
                     Menú
-                </span></h1>
+                </h1>
                 <ul>
                     <a href="#"><li>Inicio</li></a>
                     <a href="#me"><li>Sobre mí</li></a>
@@ -369,9 +369,9 @@
                 </ul>
             </div>
             <div>
-                <h1><span style="color:var(--bg-principal); font-size: large;">
+                <h1 class="lists">
                     Atajos
-                </span></h1>
+                </h1>
                 <ul>
                     <a href="#tech"><li>Tecnologías</li></a>
                     <a href=""><li>Ver Curriculum</li></a>
@@ -409,10 +409,12 @@
 function boxDisable(t) {
     if (t.checked) {
         change_view_2(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'));
-        document.getElementById('banner').src = 'IMGS/banner-dark.png';
+        setTimeout(document.getElementById('banner').src = 'IMGS/banner-dark.png', 5000);
     } else {
         change_view_1(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'));
-        document.getElementById('banner').src = 'IMGS/banner2.gif';
+        setTimeout(function(){
+            document.getElementById('banner').src = 'IMGS/banner2.gif'
+        }, 390);
     }
 }
 </script>
