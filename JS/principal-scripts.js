@@ -77,13 +77,19 @@ const change_view_2 = (layout1, layout2, bg, container, txt) => {
     document.getElementById('nodejs').src = 'IMGS/NodeJS-white.png';
 }
 
-window.addEventListener('scroll', function(e){
+window.addEventListener('scroll', function(){
+    console.log(document.querySelector('#scroller'));
     console.log(window.pageYOffset);
-    if(window.pageYOffset >= 665){
-        console.log("Oops");
-        document.getElementById("scroller").style.display = 'contents';
-        }else{
+    if(window.pageYOffset < 665){
+        /* setTimeout(function(){ */
+        /* }, 600) */
         console.log("No oops");
-        document.getElementById("scroller").style.display = 'none';
+        document.querySelector("#scroller").style.display = 'contents';
+    }else{
+        console.log("Oops");
+        document.querySelector("#scroller").style.display = 'flex';
+        document.querySelector("#scroller").style.opacity = '1';
+        /* document.querySelector("#scroller").disabled = true;
+        document.querySelector("#scroller").style.opacity = '0'; */
     }
 })

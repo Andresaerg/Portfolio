@@ -634,7 +634,7 @@ footer{
     justify-self: end;
     font-size: 16px;
     position: relative;
-    height: 45vh;
+    min-height: 45vh;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 }
@@ -650,7 +650,8 @@ footer{
 }
 
 .content{
-    padding: 0px 20px 40px 20px;
+    padding: 0px 20px 20px 20px;
+    margin-bottom: 70px;
 }
 
 .service2{
@@ -661,7 +662,7 @@ footer{
     justify-self: start;
     font-size: 16px;
     position: relative;
-    height: 45vh;
+    min-height: 45vh;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 }
@@ -684,7 +685,7 @@ footer{
     justify-self: end;
     font-size: 16px;
     position: relative;
-    height: 45vh;
+    min-height: 45vh;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 }
@@ -707,7 +708,7 @@ footer{
     justify-self: start;
     font-size: 16px;
     position: relative;
-    height: 45vh;
+    min-height: 45vh;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
 }
@@ -722,6 +723,14 @@ footer{
     font-size: 20px;
 }
 
+.services-card{
+    border-top: 1px solid rgba(160,160,160,0.2); 
+    padding: 25px 0 25px 20px;
+    position: absolute; 
+    bottom: 0; 
+    width: calc(100% - 20px);
+}
+
 .banner{
     width: 100%;
     height: 50vh;
@@ -729,16 +738,15 @@ footer{
     object-position: center;
 }
 
-/* .banner::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),#000);
-    opacity: 1;
-} */
+.contact-txt{
+    position: absolute; 
+    left: 50%; 
+    top: 25%; 
+    transform: translateX(-50%); 
+    color: var(--txtcolor-principal); 
+    font-size: 34px;
+    width: 100%;
+}
 
 body::-webkit-scrollbar{
     width: 15px;
@@ -764,12 +772,26 @@ body::-webkit-scrollbar-track{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* animation: appear .5s timing-function delay iteration-count direction fill-mode; */
+    opacity: 0;
+    transition: .5s;
+    cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
     :root {
         scroll-behavior: smooth;
+    }
+}
+
+@media (max-width: 1400px){
+    .contact-txt{
+        position: absolute; 
+        left: 50%; 
+        top: 10%; 
+        transform: translateX(-50%); 
+        color: var(--txtcolor-principal); 
+        font-size: 30px;
+        width: 100%;
     }
 }
 
