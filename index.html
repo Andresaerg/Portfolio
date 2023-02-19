@@ -53,9 +53,14 @@
             </ul>
             <ol class="responsive">
                 <li>
-                    <button href="" style="border: none; background-color: unset; color: var(--txtcolor-principal);">
+                    <button id="burger" onclick="burgermenu()" style="border: none; background-color: unset; color: var(--txtcolor-principal); z-index: 999;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </button>
+                    <button id="close-burger" onclick="closemenu()" style="display: none; border: none; background-color: unset; color: var(--txtcolor-principal); z-index: 999; opacity: 0;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                         </svg>
                     </button>
                 </li>
@@ -80,6 +85,28 @@
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
+        <div class="burger-menu">
+            <ul>
+                <li><a href="#" onclick="closemenu()">Inicio</a></li>
+                <li><a href="#me" onclick="closemenu()">Sobre mí</a></li>
+                <li><a href="#skills" onclick="closemenu()">Habilidades</a></li>
+                <li><a href="#projects" onclick="closemenu()">Proyectos</a></li>
+                <li><a href="#contact" onclick="closemenu()">Contacto</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 0 10px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--txtcolor-principal)" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                </svg>
+                <label class="switch">
+                    <input type="checkbox" id="switch2">
+                    <span class="slider round"></span>
+                </label>
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="var(--txtcolor-principal)" class="bi bi-moon" viewBox="0 0 16 16">
+                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                </svg>
+            </div>
+            <img src="IMGS/SDS-NAV.png" alt="logo-menu" width="100" height="100">
+        </div>
     </header>
     <div class="container">
         <article>
@@ -89,7 +116,7 @@
                     <br><br>
                     <span class="name">Andrés Rosales</span>
                     <br><br>
-                    <p style="line-height: 25px; letter-spacing: .75px;">
+                    <p>
                         Desarrollo proyectos orientados al entorno web, priorizando la experiencia de usuario, interfaz y funcionalidades de los sistemas.
                         Pensados para integrarse acorde a las estrategias e imagen de tu marca.
                     </p>
@@ -112,7 +139,7 @@
                         </a>
                     </span>
                     <br><br>
-                    <a href="libs/CVs/CV-AndrésRosales[BY_AR].pdf" target="_blank"><button class="btn btn-primary" style="padding: 10px 30px;"><b>CURRICULUM</b></button></a>
+                    <a href="libs/CVs/CV-AndrésRosales[BY_AR].pdf" target="_blank" style="text-decoration: none;"><button class="btn btn-primary" style="padding: 10px 30px;" id="cv-btn"><b>CURRICULUM</b></button></a>
                 </div>
                 <img style="border: unset; box-shadow: unset;" src="IMGS/banner2.gif" alt="banner" id="banner">
             </div>
@@ -169,7 +196,7 @@
                         </div>
                     </div>
                     <div class="barras">
-                        <b>Bases de datos SQL</b>
+                        <b>SQL</b>
                         <br>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
@@ -322,7 +349,7 @@
                         <h1>Diseño web personalizado</h1>
                         <br>
                         <p>
-                            En cuanto al diseño web respecta, realizo un fuerte enfásis en la importancia de conocer la imagen de la empresa o la perspectiva del cliente, buscando de esta forma cumplir con los requerimientos visuales y expectativas iniciales, brindando un sitio o aplicación web acorde a la imagen y marca de la empresa, nuevo emprendimiento o blog.
+                            En cuanto al diseño web respecta, realizo un fuerte enfásis en la importancia de conocer la imagen de la empresa o la perspectiva del cliente a fondo, buscando de esta forma cumplir con los requerimientos visuales y expectativas iniciales, brindando un sitio o aplicación web acorde a la imagen y marca de la empresa, nuevo emprendimiento o blog.
                         </p>
                     </div>
                     <div class="services-card">
@@ -396,7 +423,7 @@
                 </p>
                 <img src="IMGS/banner.jpg" alt="wallpaper" width="250" height="150" class="banner" style="opacity: 1;/* position: absolute; left: 43%; top: 30%; */">
                 <a href="https://api.whatsapp.com/send?phone=584246155748&text=%2A%C2%A1Hola!%20He%20revisado%20tu%20portafolio%2A" target="_blank">
-                    <button class="btn btn-success" style="/* background-color: #4CAF50; */position: absolute; left: 50%; top: 50%; transform: translateX(-50%); padding: 15px 30px 15px 30px;">CONTACTAR</button>
+                    <button class="ws-btn btn btn-success">CONTACTAR</button>
                 </a>
             </div>
             <span id="contact"></span>
@@ -414,7 +441,7 @@
                         <br><br><b><i>
                         <span style="color:green; font-size: 18px;">¡Póngase en contacto conmigo ahora mismo!</span>
                         </b></i><br><br>
-                        Comuníquese conmigo a través de email mediante el siguiente formulario y con gusto le brindaré respuesta en breves...
+                        Comuníquese conmigo a través de un correo electrónico mediante el siguiente formulario y con gusto le brindaré respuesta en breves...
                     </p>
                 </div>
                 </div>
@@ -424,7 +451,7 @@
                     <form action="#" class="form" id="form">
                         <div class="form__group">
                             <label><input type="text" placeholder=" " name="from_name" class="form__input" id="from_name" autocomplete="nope"><span>Nombre completo</span></label>
-                            <label><input type="text" placeholder=" " name="email_id" class="form__input" id="email_id" autocomplete="nope"><span>Correo</span></label>
+                            <label><input type="email" placeholder=" " name="email_id" class="form__input" id="email_id" autocomplete="nope"><span>Correo</span></label>
                             <label><input type="text" placeholder=" " name="company" class="form__input" id="company" autocomplete="nope"><span>Empresa (opcional)</span></label>
                             <label><textarea name="message" placeholder=" " cols="30" rows="5" class="textarea" id="message"></textarea><span class="textarea__label">Ingrese su mensaje</span></label>
                             <input type="submit" name="btn" value="Enviar" id="button">
@@ -484,6 +511,18 @@
             </div>
         </section>
     </div>
+    <div class="language-options">
+        <a href="#" id="selectedLang">
+            <button class="language-option">
+                <img src="IMGS/Spain.png" alt="spanish">
+            </button>
+        </a>
+        <a href="libs/ENG/index.html" id="secondLang">
+            <button class="secondary-language">
+                <img src="IMGS/USA2.jpg" alt="english">
+            </button>
+        </a>
+    </div>
     <footer>
         <div>
             &#169;
@@ -505,24 +544,33 @@
     window.onload = () => {
         date(document.getElementById("date"));
 
-        let interruptor = document.getElementById("switch");
-        interruptor.addEventListener("change", function(e){
-            boxDisable(e.target);
+        /* let interruptor = document.getElementById("switch"); */
+        let interruptor = document.querySelectorAll('input[type=checkbox]');
+        interruptor.forEach(btn => {
+                btn.addEventListener("change", function(e){
+                for(btns of interruptor){
+                    btns.checked = e.target.checked;
+                }
+                boxDisable(e.target);
+            })
         })
 
-        let anchor = document.getElementById("download");
-        anchor.addEventListener('click', function(e){
+        document.getElementById('selectedLang').addEventListener('click', function(e){
             e.preventDefault();
-            DownloadFile('CV-AndrésRosales[BY_AR].pdf');
-        });
+        })
+
+        intervalManager(true, Next, 4000);
+
     }
 
 function boxDisable(t) {
     if (t.checked) {
         change_view_2(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'));
         document.getElementById('banner').src = 'IMGS/banner-dark.png';
+        document.getElementById('nodejs').src = 'IMGS/NodeJS-white.png';
     } else {
         change_view_1(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'));
+        document.getElementById('nodejs').src = 'IMGS/NodeJS.png';
         setTimeout(function(){
             document.getElementById('banner').src = 'IMGS/banner2.gif'
         }, 390);

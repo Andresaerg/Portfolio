@@ -37,7 +37,12 @@ const change_view_1 = (layout1, layout2, bg, container, txt) => {
         e.style.color = 'var(--article-color)';
     })
 
-    document.getElementById('nodejs').src = 'IMGS/NodeJS.png';
+    document.querySelectorAll('.barras b').forEach(e => {
+        e.style.color = 'var(--txtcolor-primary)';
+    })
+
+    document.querySelector('.burger-menu').style.background = 'var(--bg-principal)';
+    document.querySelectorAll('.slider_btn').forEach(e => e.style.color = 'var(--article-color)');
 }
     
 const change_view_2 = (layout1, layout2, bg, container, txt) => {
@@ -75,21 +80,54 @@ const change_view_2 = (layout1, layout2, bg, container, txt) => {
     })
 
     document.getElementById('nodejs').src = 'IMGS/NodeJS-white.png';
+
+    document.querySelectorAll('.barras b').forEach(e => {
+        e.style.color = 'var(--txtcolor-secondary)';
+    })
+
+    document.querySelector('.burger-menu').style.background = 'var(--bg-secondary)';
+    document.querySelectorAll('.slider_btn').forEach(e => e.style.color = 'var(--txtcolor-secondary)');
 }
 
 window.addEventListener('scroll', function(){
-    console.log(document.querySelector('#scroller'));
-    console.log(window.pageYOffset);
-    if(window.pageYOffset < 665){
-        /* setTimeout(function(){ */
-        /* }, 600) */
-        console.log("No oops");
-        document.querySelector("#scroller").style.display = 'contents';
+    var value = parseInt(document.documentElement.scrollTop);
+    if(value < 665){
+        document.querySelector("#scroller").style.right = '-50px';
+        document.querySelector("#scroller").style.opacity = '0';
     }else{
-        console.log("Oops");
-        document.querySelector("#scroller").style.display = 'flex';
+        document.querySelector("#scroller").style.right = '20px';
         document.querySelector("#scroller").style.opacity = '1';
-        /* document.querySelector("#scroller").disabled = true;
-        document.querySelector("#scroller").style.opacity = '0'; */
     }
 })
+
+function burgermenu(){
+    document.querySelector('#burger svg').style.fill = 'orange';
+    document.querySelector('.burger-menu').style.right = '0';
+    document.querySelector('#burger svg').style.opacity = '0';
+    document.querySelector('#burger svg').classList.toggle('rotate');
+    document.querySelector('#close-burger').style.display = 'unset';
+    document.querySelector('#close-burger').disabled = true;
+    setTimeout(function(){
+        document.querySelector('#close-burger').disabled = false;
+        document.querySelector('#burger').style.display = 'none';
+        document.querySelector('#close-burger').style.opacity = '1';
+        document.querySelector('#close-burger svg').classList.toggle('rotate');
+        document.querySelector('#close-burger svg').style.fill = 'orange';
+    }, 500);
+}
+
+function closemenu(){
+    document.querySelector('#close-burger svg').style.fill = 'var(--txtcolor-principal)';
+    document.querySelector('.burger-menu').style.right = '-100%';
+    document.querySelector('#close-burger').style.opacity = '0';
+    document.querySelector('#close-burger svg').classList.toggle('rotate');
+    document.querySelector('#burger').style.display = 'unset';
+    document.querySelector('#close-burger').disabled = true;
+    setTimeout(function(){
+        document.querySelector('#close-burger').disabled = false;
+        document.querySelector('#close-burger').style.display = 'none';
+        document.querySelector('#burger svg').style.opacity = '1';
+        document.querySelector('#burger svg').classList.toggle('rotate');
+        document.querySelector('#burger svg').style.fill = 'var(--txtcolor-secondary)';
+    }, 500);
+}

@@ -1,0 +1,607 @@
+<!--
+          //////////////////   //////////////////
+         //////////////////   //////////////////
+        //////      //////   //////       /////
+       //////////////////   //////////////////
+      //////      //////   //////   //////
+     //////      //////   //////    //////
+    //////      //////   //////     //////
+
+    -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Andrés Rosales | Engineer</title>
+        <link rel="stylesheet" type="text/css" href="../../CSS/style.css">
+        <link rel="shortcut icon" href="../../IMGS/SDS.png" type="image/x-icon">
+        <link rel="stylesheet" href="../Bootstrap/CSS/bootstrap.css"></link>
+        <script type="text/javascript" src="../../JS/principal-scripts.js"></script>
+        <script src="../Bootstrap/JS/bootstrap.bundle.js"></script>
+        <script src="../Bootstrap/JS/jquery-3.6.0.min.js"></script>
+        <script src="../../node_modules/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">emailjs.init('1DYi9grOdbv7E9jR3')</script>
+    </head>
+    <body>
+        <a href="#">
+        <button class="scroller" id="scroller">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+        </button>
+        </a>
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <a href="#" style="color:unset; text-decoration: none;">
+                        <li style="border: unset;">
+                            <div style="margin-right: 15px;">
+                                <img src="../../IMGS/SDS-NAV.png" alt="Logo-nav" width="50" height="50">
+                            </div>
+                            <div>
+                                <span class="arcodev"><b style="color: var(--txtcolor-principal)">ARCODEV</b></span>
+                                <br>
+                                <span class="eslogan" style="color: var(--txtcolor-principal)">Andrés Rosales Code Developer</span>
+                            </div>
+                        </li>
+                    </a>
+                </ul>
+                <ol class="responsive">
+                    <li>
+                        <button id="burger" onclick="burgermenu()" style="border: none; background-color: unset; color: var(--txtcolor-principal); z-index: 999;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                            </svg>
+                        </button>
+                        <button id="close-burger" onclick="closemenu()" style="display: none; border: none; background-color: unset; color: var(--txtcolor-principal); z-index: 999; opacity: 0;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ol>
+                <ul>
+                    <div style="display: flex; align-items: center; gap: 0 10px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--txtcolor-principal)" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                        </svg>
+                        <label class="switch">
+                            <input type="checkbox" id="switch">
+                            <span class="slider round"></span>
+                        </label>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="var(--txtcolor-principal)" class="bi bi-moon" viewBox="0 0 16 16">
+                            <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                        </svg>
+                    </div>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#me">About me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <ul>
+                    <li><a href="#" onclick="closemenu()">Home</a></li>
+                    <li><a href="#me" onclick="closemenu()">About me</a></li>
+                    <li><a href="#skills" onclick="closemenu()">Skill</a></li>
+                    <li><a href="#projects" onclick="closemenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+                </ul>
+                <div style="display: flex; align-items: center; gap: 0 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--txtcolor-principal)" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                    </svg>
+                    <label class="switch">
+                        <input type="checkbox" id="switch2">
+                        <span class="slider round"></span>
+                    </label>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="var(--txtcolor-principal)" class="bi bi-moon" viewBox="0 0 16 16">
+                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                    </svg>
+                </div>
+                <img src="../../IMGS/SDS-NAV.png" alt="logo-menu" width="100" height="100">
+            </div>
+        </header>
+        <div class="container">
+            <article>
+                <div id="inicio" class="section">
+                    <div class="lil-container">
+                        <span id="tags">Informatics Engineer - Web Developer - Software Developer</span>
+                        <br><br>
+                        <span class="name">Andrés Rosales</span>
+                        <br><br>
+                        <p>
+                            I develop projects oriented to the web environment, prioritizing the user experience, interface and functionalities of the systems.
+                            Designed to integrate according to the strategies and image of your brand.
+                        </p>
+                        <br><br>
+                        <span class="redes">
+                            <a href="https://github.com/Andresaerg" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                                </svg>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=584246155748&text=%2A%C2%A1Hola!%20He%20revisado%20tu%20portafolio%2A" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:andrescod10@gmail.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                </svg>
+                            </a>
+                        </span>
+                        <br><br>
+                        <a href="../../libs/CVs/CV-AndrésRosales[BY_AR].pdf" target="_blank" style="text-decoration: none;"><button class="btn btn-primary" style="padding: 10px 30px;" id="cv-btn"><b>CURRICULUM</b></button></a>
+                    </div>
+                    <img style="border: unset; box-shadow: unset;" src="../../IMGS/banner2.gif" alt="banner" id="banner">
+                </div>
+                <span id="me"></span>
+            </article>
+            <article>
+                <div style="text-align: center;">
+                    <h1><span class="titles subtitles">About me</span></h1>
+                    <br><br><br><br>
+                    <div class="section">
+                        <img src="../../IMGS/test.png" alt="me">
+                        <p style="text-align: justify;">
+                            My name is Andrés Rosales, I am 23 years old and I am a graduate of the Dr. Rafael Belloso Chacín Private University  (URBE) as
+                            <b><i>Informatics Engineer</i></b>. I'm currently focused in web and software development, I have 1 year of experience in the area.
+                            My specialty is to develop software and web apps, working individually or in a team, efficiently and implementing agile methodologies,
+                            thus obtaining a high projection as a DevOps Engineer.
+                        </p>
+                    </div>
+                </div>
+                <span id="skills"></span>
+            </article>
+            <article>
+                <div style="text-align: center;">
+                    <h1><span class="titles subtitles">Skills</span></h1>
+                    <br><br>
+                    <div class="section skills-div">
+                        <div class="barras">
+                            <b>HTML</b>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                            </div>
+                        </div>
+                        <div class="barras">
+                            <b>CSS</b>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                            </div>
+                        </div>
+                        <div class="barras">
+                            <b>Vanilla JavaScript</b>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                            </div>
+                        </div>
+                        <div class="barras">
+                            <b>Pure PHP</b>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                            </div>
+                        </div>
+                        <div class="barras">
+                            <b>SQL</b>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+                        <div class="barras">
+                            <b>Git</b>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                            </div>
+                        </div>
+                        <div class="barras">
+                            <b>Node JS</b>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                            </div>
+                        </div>
+                        <div class="barras">
+                            <b>Wix</b>
+                            <br>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span id="projects"></span>
+            </article>
+            <article>
+                <div style="text-align: center;">
+                    <h1><span class="titles subtitles" id="projects">
+                        Projects
+                    </span></h1>
+                    <br><br><br><br>
+                    <div class="section" style="flex-wrap: wrap; gap: 50px;">
+                        <div class="project">
+                            <a href="../../IMGS/inicio-svm.png" target="_blank" title="Ver imagen">
+                                <img src="../../IMGS/inicio-svm.png" alt="index-svm">
+                            </a>
+                            <span id="aTitle">Super Videomania Web</span>
+                            Updates made with HTML, CSS, JS Vanilla and Pure PHP.
+                            <a href="https://supervideomania.net/" target="_blank"><button>Go to site</button></a>
+                        </div>
+                        <div class="project">
+                            <a href="../../IMGS/reservas-soft_svm.png" target="_blank" title="Ver imagen">
+                                <img src="../../IMGS/reservas-soft_svm.png" alt="reservas-svm">
+                            </a>
+                            <span id="aTitle">Super Videomania Web</span>
+                            Booking software made with HTML, CSS, JS Vanilla, Pure PHP, SQL, Bootstrap and the Day.js framework.
+                            <a href="https://supervideomania.net/" target="_blank"><button>Go to site</button></a>
+                        </div>
+                        <div class="project">
+                            <a href="../../IMGS/ecommerce-svm.png" target="_blank" title="Ver imagen">
+                                <img src="../../IMGS/ecommerce-svm.png" alt="ecommerce-svm">
+                            </a>
+                            <span id="aTitle">Super Videomania Web</span>
+                            E-Commerce software in tests environment made with HTML, CSS, JS Vanilla, Pure PHP, SQL and Bootstrap.
+                            <a href="https://supervideomania.net/" target="_blank"><button>Go to site</button></a>
+                        </div>
+                        <div class="project">
+                            <a href="../../IMGS/Masersuca2.png" target="_blank" title="Ver imagen">
+                                <img src="../../IMGS/Masersuca2.png" alt="masersuca-tesis">
+                            </a>
+                            <span id="aTitle">Masersuca &#8212; Inventory Management</span>
+                            Management software for inventory, sales, customers, invoices and more. Made with HTML, CSS, JS Vanilla, Pure PHP, SQL, Bootstrap and NodeJS along with other dependencies.
+                            <a href="../../IMGS/Masersuca2.png" target="_blank"><button>View image</button></a>
+                        </div>
+                        <div class="project">
+                            <a href="../../IMGS/El-Backend.png" target="_blank" title="Ver imagen">
+                                <img src="../../IMGS/El-Backend.png" alt="El-backend">
+                            </a>
+                            <span id="aTitle">Simple Academic Project</span>
+                            Web page made quickly for academic reasons, using HTML and CSS, styles designed from scratch.
+                            <a href="https://andresaerg.github.io/TW-Proyecto/index.html" target="_blank"><button>Go to site</button></a>
+                        </div>
+                    </div>
+                </div>
+                <span id="tech"></span>
+            </article>
+            <article>
+                <div style="text-align: center;">
+                    <h1><span class="titles subtitles">Technologies used</span></h1>
+                </div>
+                <br><br>
+                <div class="container-for-slider_container">
+                    <div class="container-slider">
+                        <div class="slider2" id="slider2">
+                            <div class="slider_Section">
+                                <img src="../../imgs/HTML5.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/CSS3.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/JS.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/PHP.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/Java.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/NodeJS.png" alt="" class="sliderImg" id="nodejs">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/SQL2.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/Xampp.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/phpMyAdmin.webp" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/Git2.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/Postman.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/Bootstrap.png" alt="" class="sliderImg">
+                            </div>
+                            <div class="slider_Section">
+                                <img src="../../imgs/Wix.png" alt="" class="sliderImg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider_btn btn_left" id="btn_left">&#60;</div>
+                    <div class="slider_btn btn_right" id="btn_right">&#62;</div>
+                </div>
+                <span id="services"></span>
+            </article>
+            <article>
+                <div style="text-align: center;">
+                    <h1><span class="titles subtitles">Services</span></h1>
+                </div>
+                <br><br>
+                <div class="services">
+                    <div class="service1">
+                        <div style="display: flex; justify-content: center; margin-bottom: 0px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-display" viewBox="0 0 16 16">
+                                <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z"/>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <hr>
+                            <h1>Custom web design</h1>
+                            <br>
+                            <p>
+                                As far as web design is concerned, I make a strong emphasis on the importance of knowing the image of the company or the perspective of the client, seeking in this way to meet the visual requirements and initial expectations, providing a website or web application according to the image and brand of the company, new venture or blog.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <a href="#ws" style="text-decoration: none; color: orange;">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="service2">
+                        <div style="display: flex; justify-content: center; margin-bottom: 0px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-tools" viewBox="0 0 16 16">
+                                <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0Zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708ZM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11Z"/>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <hr>
+                            <h1>Functions and features</h1>
+                            <br>
+                            <p>
+                                In the development of websites or web applications, as in the development of other types of software, it goes far beyond a friendly and attractive graphical interface, it is also essential to comply with the characteristics desired by the client, creating events and various efficient and scalable functionalities. Thus providing the highest possible quality in the system.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <a href="#ws" style="text-decoration: none; color: orange;">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="service3">
+                        <div style="display: flex; justify-content: center; margin-bottom: 0px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-database" viewBox="0 0 16 16">
+                                <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313ZM13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 5.698ZM14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13V4Zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A4.92 4.92 0 0 0 13 8.698Zm0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525Z"/>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <hr>
+                            <h1>Creation and management of databases</h1>
+                            <br>
+                            <p>
+                                It is very important to design in the most appropriate and optimal way the databases that will be implemented in a system, therefore, I am in charge of obtaining all possible requirements from the client, in order to create or optimize the database, its tables and content. In this way, speeding up and facilitating the handling of data and requests by the software.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <a href="#ws" style="text-decoration: none; color: orange;">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="service4">
+                        <div style="display: flex; justify-content: center; margin-bottom: 0px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#FFFFFF">
+                                <path d="M0 0h24v24H0V0z" fill="none"/>
+                                <path d="M21 10h-8.01V7L9 11l3.99 4v-3H21v5H3V5h18v3h2V5c0-1.1-.9-2-2-2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2v-5H23c0-1.1-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <hr>
+                            <h1>Redesign and/or maintenance</h1>
+                            <br>
+                            <p>
+                                It is very important that a website has excellent content, therefore and others, I provide services ofmaintenance or redesign to your website as the case may be. From styles and layout to functions and server side operations.
+                            </p>
+                        </div>
+                        <div class="services-card">
+                            <a href="#ws" style="text-decoration: none; color: orange;">LEARN MORE</a>
+                        </div>
+                    </div>
+                </div>
+                <span id="ws"></span>
+            </article>
+            <div>
+                <div style="position: relative; text-align: center;">
+                    <p class="contact-txt">
+                        Are you interested in carrying out any project?
+                        <br>
+                        Contact me via whatsapp through the button below.
+                    </p>
+                    <img src="../../IMGS/banner.jpg" alt="wallpaper" width="250" height="150" class="banner" style="opacity: 1;/* position: absolute; left: 43%; top: 30%; */">
+                    <a href="https://api.whatsapp.com/send?phone=584246155748&text=%2A%C2%A1Hola!%20He%20revisado%20tu%20portafolio%2A" target="_blank">
+                        <button class="ws-btn btn btn-success">CONTACT</button>
+                    </a>
+                </div>
+                <span id="contact"></span>
+            </div>
+            <article>
+                <div class="grid-Contact">
+                    <div>
+                    <h1>
+                        <span class="titles subtitles">Contact me!</span>
+                    </h1>
+                    <br>
+                    <div class="section">
+                        <p style="max-width: none;">
+                            Do you need to create a website for your personal site, startup, or any other project you want?
+                            <br><br><b><i>
+                            <span style="color:green; font-size: 18px;">Contact me right now!</span>
+                            </b></i><br><br>
+                            Contact me via email using the form and I will gladly provide you with an answer shortly...
+                        </p>
+                    </div>
+                    </div>
+                    <div>
+                        <h1><span class="titles subtitles">Contact Form</span></h1>
+                        <br>
+                        <form action="#" class="form" id="form">
+                            <div class="form__group">
+                                <label><input type="text" placeholder=" " name="from_name" class="form__input" id="from_name" autocomplete="nope"><span>Full name</span></label>
+                                <label><input type="email" placeholder=" " name="email_id" class="form__input" id="email_id" autocomplete="nope"><span>Email</span></label>
+                                <label><input type="text" placeholder=" " name="company" class="form__input" id="company" autocomplete="nope"><span>Enterprise (optional)</span></label>
+                                <label><textarea name="message" placeholder=" " cols="30" rows="5" class="textarea" id="message"></textarea><span class="textarea__label">Enter your message</span></label>
+                                <input type="submit" name="btn" value="Send" id="button">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <div class="pie">
+            <section>
+                <div class="logo">
+                    <div style="text-align: center;">
+                        <img src="../../IMGS/SDS.png" alt="SDS" width="200" height="200">
+                    </div>
+                    <br>
+                    <div class="redes" style="justify-content: center;">
+                        <a href="https://github.com/Andresaerg" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=584246155748&text=%2A%C2%A1Hello!%20I%20have%20reviewed%20your%20portfolio%2A" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:andrescod10@gmail.com">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="menu">
+                    <h1 class="lists">
+                        Menu
+                    </h1>
+                    <ul>
+                        <a href="#"><li>Home</li></a>
+                        <a href="#me"><li>About me</li></a>
+                        <a href="#skills"><li>Skills</li></a>
+                        <a href="#projects"><li>Projects</li></a>
+                        <a href="#contact"><li>Contact</li></a>
+                    </ul>
+                </div>
+                <div class="atajos">
+                    <h1 class="lists">
+                        Shortcuts
+                    </h1>
+                    <ul>
+                        <a href="#services"><li>Services</li></a>
+                        <a href="#tech"><li>Technologies</li></a>
+                        <a href="#ws"><li>Contact via WS</li></a>
+                        <a href="#" id="download"><li>Download Curriculum</li></a>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="language-options">
+            <a href="#">
+                <button class="language-option" id="selectedLang">
+                    <img src="../../IMGS/USA2.jpg" alt="english">
+                </button>
+            </a>
+            <a href="../../index.html">
+                <button class="secondary-language">
+                    <img src="../../IMGS/Spain.png" alt="spanish">
+                </button>
+            </a>
+        </div>
+        <footer>
+            <div>
+                &#169;
+                <span id="date">
+                    
+                </span>
+                Arcodev &nbsp; &boxh; &nbsp;
+                <span id="powered">
+                    Powered by AR
+                </span>
+            </div>
+        </footer>
+        <script src="../../JS/email.js"></script>
+    </body>
+    </html>
+    
+    <script src="../../JS/slider.js"></script>
+    <script>
+        window.onload = () => {
+            date(document.getElementById("date"));
+    
+            /* let interruptor = document.getElementById("switch"); */
+            let interruptor = document.querySelectorAll('input[type=checkbox]');
+            interruptor.forEach(btn => {
+                    btn.addEventListener("change", function(e){
+                    for(btns of interruptor){
+                        btns.checked = e.target.checked;
+                    }
+                    boxDisable(e.target);
+                })
+            })
+
+            document.getElementById('selectedLang').addEventListener('click', function(e){
+                e.preventDefault();
+            })
+
+            intervalManager(true, Next, 4000);
+            
+        }
+    
+    function boxDisable(t) {
+        if (t.checked) {
+            change_view_2(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'));
+            document.getElementById('banner').src = '../../IMGS/banner-dark.png';
+            document.getElementById('nodejs').src = '../../IMGS/NodeJS-white.png';
+        } else {
+            change_view_1(document.querySelector('.navbar'), document.querySelector('footer'), document.querySelector('body'), document.querySelectorAll('article'), document.querySelectorAll('span'));
+            document.getElementById('nodejs').src = '../../IMGS/NodeJS.png';
+            setTimeout(function(){
+                document.getElementById('banner').src = '../../IMGS/banner2.gif'
+            }, 390);
+        }
+    }
+    
+    function DownloadFile(fileName) {
+                //Set the File URL.
+                var url = "libs/CVs/" + fileName;
+    
+                //Create XMLHTTP Request.
+                var req = new XMLHttpRequest();
+                req.open("GET", url, true);
+                req.responseType = "blob";
+                req.onload = function () {
+                    //Convert the Byte Data to BLOB object.
+                    var blob = new Blob([req.response], { type: "application/octetstream" });
+    
+                    //Check the Browser type and download the File.
+                    var isIE = false || !!document.documentMode;
+                    if (isIE) {
+                        window.navigator.msSaveBlob(blob, fileName);
+                    } else {
+                        var url = window.URL || window.webkitURL;
+                        link = url.createObjectURL(blob);
+                        var a = document.createElement("a");
+                        a.setAttribute("download", fileName);
+                        a.setAttribute("href", link);
+                        document.body.appendChild(a);
+                        a.click();
+                        document.body.removeChild(a);
+                    }
+                };
+                req.send();
+            };
+    </script>
