@@ -79,8 +79,6 @@ const change_view_2 = (layout1, layout2, bg, container, txt) => {
         e.style.color = 'var(--txtcolor-secondary)';
     })
 
-    document.getElementById('nodejs').src = 'IMGS/NodeJS-white.png';
-
     document.querySelectorAll('.barras b').forEach(e => {
         e.style.color = 'var(--txtcolor-secondary)';
     })
