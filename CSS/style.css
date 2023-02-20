@@ -923,7 +923,7 @@ body::-webkit-scrollbar-track{
     }
     .lil-container {
         max-width: 500px;
-        padding: 25px;
+        padding-top: 25px;
     }
     .lil-container span#tags{
         font-size: 13px;
@@ -1073,7 +1073,7 @@ body::-webkit-scrollbar-track{
     .services{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-rows: unset;
         gap: 40px 25px;
         justify-items: center;
     }
@@ -1219,5 +1219,22 @@ body::-webkit-scrollbar-track{
     }
     .rotate{
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 350px){
+    .arcodev{
+        letter-spacing: 10px;
+    }
+    .arcodev b{
+        font-size: 10px;
+    }
+    .eslogan{
+        font-size: 7.5px;
+        letter-spacing: .2px;
+    }
+    #Logo-nav{
+        width: 30px;
+        height: 30px;
     }
 }
