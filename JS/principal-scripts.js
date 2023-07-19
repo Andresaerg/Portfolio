@@ -111,6 +111,7 @@ function burgermenu(){
         document.querySelector('#close-burger').style.opacity = '1';
         document.querySelector('#close-burger svg').classList.toggle('rotate');
         document.querySelector('#close-burger svg').style.fill = 'orange';
+        document.body.classList.add('no-scroll');
     }, 500);
 }
 
@@ -127,5 +128,6 @@ function closemenu(){
         document.querySelector('#burger svg').style.opacity = '1';
         document.querySelector('#burger svg').classList.toggle('rotate');
         document.querySelector('#burger svg').style.fill = 'var(--txtcolor-secondary)';
+        document.body.classList.remove('no-scroll');
     }, 500);
 }
