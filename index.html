@@ -154,7 +154,7 @@
                         Mi nombre es Andrés Rosales, tengo 24 años y soy egresado de la Universidad Privada Dr. Rafael Belloso Chacín (URBE) como
                         <b><i>Ingeniero en Informática</i></b>. Actualmente estoy enfocado
                         en el desarrollo web y de software, poseo +1 año de experiencia en el área. Mi especialidad es desarrollar software y web apps,
-                        trabajando de forma individual o en equipo, de manera eficiente e implementado metodologías ágiles, 
+                        trabajando de forma individual o en equipo, de manera eficiente e implementando metodologías ágiles, 
                         obteniendo así una alta proyección en el ámbito.
                     </p>
                 </div>
@@ -370,7 +370,7 @@
                         <h1>Diseño web personalizado</h1>
                         <br>
                         <p>
-                            En cuanto al diseño web respecta, realizo un fuerte enfásis en la importancia de conocer la imagen de la empresa o la perspectiva del cliente a fondo, buscando de esta forma cumplir con los requerimientos visuales y expectativas iniciales, brindando un sitio o aplicación web acorde a la imagen y marca de la empresa, nuevo emprendimiento o blog.
+                            En cuanto al diseño web respecta, realizo un fuerte énfasis en la importancia de conocer la imagen de la empresa o la perspectiva del cliente a fondo, buscando de esta forma cumplir con los requerimientos visuales y expectativas iniciales, brindando un sitio o aplicación web acorde a la imagen y marca de la empresa, nuevo emprendimiento o blog.
                         </p>
                     </div>
                     <div class="services-card">
@@ -562,10 +562,10 @@
 
 <script src="JS/slider.js"></script>
 <script>
-    window.onload = () => {
+    /* window.onload = () => { */
         date(document.getElementById("date"));
 
-        const email = document.getElementById('email_id');
+        const valid_email = document.getElementById('email_id');
         /* let interruptor = document.getElementById("switch"); */
         let interruptor = document.querySelectorAll('input[type=checkbox]');
         interruptor.forEach(btn => {
@@ -599,25 +599,25 @@
             const send = document.getElementById('button');
             /* $result.text(''); */
 
-            if (validateEmail(email.value)) {
+            if (validateEmail(valid_email.value)) {
                 document.getElementById('email_label').style = '';
-                email.style = '';
+                valid_email.style = '';
                 send.classList.remove('disabled');
                 send.disabled = false;
             } else {
                 document.getElementById('email_label').style = 'color: red;';
-                email.style = 'border-color: red;';
+                valid_email.style = 'border-color: red;';
                 send.classList.add('disabled');
                 send.disabled = true;
             }
             return false;
         }
 
-        email.addEventListener('keyup', function(){
+        valid_email.addEventListener('keyup', function(){
             validate();
         });
 
-    }
+    /* } */
     
 function handleInput(element) {
     if (element.value[0] === ' ') {
@@ -642,7 +642,7 @@ function boxDisable(t) {
 
 function DownloadFile(fileName) {
             //Set the File URL.
-            var url = "libs/CVs/" + fileName;
+            var url = "https://andresaerg.github.io/Portfolio/libs/CVs/" + fileName;
 
             //Create XMLHTTP Request.
             var req = new XMLHttpRequest();
